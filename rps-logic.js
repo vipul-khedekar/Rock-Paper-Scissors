@@ -15,4 +15,5 @@ function computerPlays() {
     return computerChoice;
 }
 
-console.log(computerPlays());
+userPlays = window.prompt(`Choose Rock, Paper or Scissors`);
+console.log(userPlays);
