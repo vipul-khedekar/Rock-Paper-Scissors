@@ -4,14 +4,15 @@ function computerPlays() {
     let computerRandom = Math.random();
 
     if (computerRandom < 0.33) {
-    computerChoice = `Computer plays Rock`;
+    computerChoice = `Rock`;
     }   
     else if (computerRandom < 0.66) {
-    computerChoice = `Computer plays Paper`;
+    computerChoice = `Paper`;
     }   
     else {
-    computerChoice = `Computer plays Scissors`;
+    computerChoice = `Scissors`;
     }
     return computerChoice;
 }
+
 console.log(computerPlays());
