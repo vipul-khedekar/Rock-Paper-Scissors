@@ -4,19 +4,18 @@ function computerPlays() {
     let computerRandom = Math.random();
 
     if (computerRandom < 0.33) {
-    computerChoice = `Rock`;
+    computerChoice = `ROCK`;
     }   
     else if (computerRandom < 0.66) {
-    computerChoice = `Paper`;
+    computerChoice = `PAPER`;
     }   
     else {
-    computerChoice = `Scissors`;
+    computerChoice = `SCISSORS`;
     }
     return computerChoice;
 }
 
 let userPlays = window.prompt(`Choose Rock, Paper or Scissors`);
-
-
+    userPlays = userPlays.toUpperCase();
 
 console.log(userPlays);
