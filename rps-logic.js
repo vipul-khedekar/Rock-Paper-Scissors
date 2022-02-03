@@ -1,5 +1,4 @@
 function computerPlays() {
-
     let computerChoice;
     let computerRandom = Math.random();
     
@@ -12,8 +11,6 @@ function computerPlays() {
     else {
     computerChoice = `SCISSORS`;
     }
-
-    console.log(computerRandom);
     return computerChoice;
 }
 
@@ -32,7 +29,6 @@ function gameRound(player, computer) {
     return result;
 }
 
-
 const computer = computerPlays();
 
 const playerPlays = `rock`;
@@ -40,11 +36,12 @@ const player = playerPlays.toUpperCase();
 
 let result;
 
+function gameMain() {
 for (count = 1; count <= 5; count++) {
     gameRound(player, computer);
 }
+}
 
-
-console.log(computer);
 console.log(player);
+console.log(computer);
 console.log(gameRound(player,computer));
