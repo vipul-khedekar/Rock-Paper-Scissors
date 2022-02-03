@@ -1,4 +1,4 @@
-function computerPlays() {
+function computerPlays() {                                          //Computer chooses Rock, Paper or Scissors
     let computerChoice;
     let computerRandom = Math.random();
     
@@ -14,7 +14,7 @@ function computerPlays() {
     return computerChoice;
 }
 
-function gameRound(player, computer) {
+function gameRound(player, computer) {                              //Round of the game.
     if ((player === `ROCK` && computer === `SCISSORS`) ||
        (player === `PAPER` && computer === `ROCK`) ||
        (player === `SCISSORS` && computer === `PAPER`)) {
@@ -29,19 +29,20 @@ function gameRound(player, computer) {
     return result;
 }
 
-const computer = computerPlays();
+function gameMain() {                                           //Game of 5 rounds.
+    
+    for (count = 1; count <= 5; count++) {
 
-const playerPlays = `rock`;
-const player = playerPlays.toUpperCase();
+        const computer = computerPlays();
 
-let result;
-
-function gameMain() {
-for (count = 1; count <= 5; count++) {
-    gameRound(player, computer);
+        const playerPlays = `rock`;
+        const player = playerPlays.toUpperCase();
+        
+        gameRound(player, computer);
+        console.log(player);
+        console.log(computer);
+        console.log(gameRound(player,computer));
+    }
 }
-}
 
-console.log(player);
-console.log(computer);
-console.log(gameRound(player,computer));
+console.log(gameMain());
