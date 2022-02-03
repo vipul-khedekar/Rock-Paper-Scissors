@@ -15,6 +15,7 @@ function computerPlays() {                                          //Computer c
 }
 
 function gameRound(player, computer) {                              //Round of the game.
+    
     if ((player === `ROCK` && computer === `SCISSORS`) ||
        (player === `PAPER` && computer === `ROCK`) ||
        (player === `SCISSORS` && computer === `PAPER`)) {
@@ -39,6 +40,7 @@ function gameMain() {                                           //Game of 5 roun
         const player = playerPlays.toUpperCase();
         
         gameRound(player, computer);
+
         console.log(player);
         console.log(computer);
         console.log(gameRound(player,computer));
