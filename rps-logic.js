@@ -17,13 +17,6 @@ function computerPlays() {
     return computerChoice;
 }
 
-const computer = computerPlays();
-
-const playerPlays = `rock`;
-const player = playerPlays.toUpperCase();
-
-let result;
-
 function gameRound(player, computer) {
     if ((player === `ROCK` && computer === `SCISSORS`) ||
        (player === `PAPER` && computer === `ROCK`) ||
@@ -38,6 +31,19 @@ function gameRound(player, computer) {
     }
     return result;
 }
+
+
+const computer = computerPlays();
+
+const playerPlays = `rock`;
+const player = playerPlays.toUpperCase();
+
+let result;
+
+for (count = 1; count <= 5; count++) {
+    gameRound(player, computer);
+}
+
 
 console.log(computer);
 console.log(player);
