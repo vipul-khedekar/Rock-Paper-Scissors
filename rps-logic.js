@@ -1,8 +1,8 @@
 function computerPlays() {
-    
+
     let computerChoice;
     let computerRandom = Math.random();
-
+    
     if (computerRandom < 0.33) {
     computerChoice = `ROCK`;
     }   
@@ -12,10 +12,15 @@ function computerPlays() {
     else {
     computerChoice = `SCISSORS`;
     }
+
+    console.log(computerRandom);
     return computerChoice;
 }
 
-let userPlays = window.prompt(`Choose Rock, Paper or Scissors`);
-    userPlays = userPlays.toUpperCase();
+const computer = computerPlays();
 
-console.log(userPlays);
+const playerPlays = `rock`;
+const player = playerPlays.toUpperCase();
+
+console.log(computer);
+console.log(player);
