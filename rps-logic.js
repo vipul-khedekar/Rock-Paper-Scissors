@@ -34,7 +34,7 @@ for (count = 1; count <= 5; count++) {
 
     const computer = computerPlays();
 
-    const playerPlays = `rock`;
+    const playerPlays = prompt("Choose either Rock, Paper or Scissors.");
     const player = playerPlays.toUpperCase();
         
     gameRound(player, computer);
