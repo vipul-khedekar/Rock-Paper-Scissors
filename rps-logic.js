@@ -30,21 +30,16 @@ function gameRound(player, computer) {                              //Round of t
     return result;
 }
 
-function gameMain() {                                           //Game of 5 rounds.
-    
-    for (count = 1; count <= 5; count++) {
+for (count = 1; count <= 5; count++) {
 
-        const computer = computerPlays();
+    const computer = computerPlays();
 
-        const playerPlays = `rock`;
-        const player = playerPlays.toUpperCase();
+    const playerPlays = `rock`;
+    const player = playerPlays.toUpperCase();
         
-        gameRound(player, computer);
+    gameRound(player, computer);
 
-        console.log(player);
-        console.log(computer);
-        console.log(gameRound(player,computer));
-    }
+    console.log(player);
+    console.log(computer);
+    console.log(gameRound(player,computer));
 }
-
-console.log(gameMain());
