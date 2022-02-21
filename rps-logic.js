@@ -40,8 +40,16 @@ function gameRound(player, computer) {                              //Round of t
             const player = playerChoice.dataset.choice;
             const computer = computerPlays();
 
+            const displayResultContainer = document.querySelector('.displayResultContainer');
+            const displayResult = document.createElement('div');
+
+            displayResult.innerText = gameRound(player, computer);
+
+            displayResultContainer.append(displayResult);
+            
             console.log(player);
             console.log(computer);
+            console.log(gameRound(player, computer));
         });
     });
     
