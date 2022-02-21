@@ -40,9 +40,6 @@ function gameRound(player, computer) {                              //Round of t
     });
 
     const computer = computerPlays();
-
-    const playerPlays = prompt("Choose either Rock, Paper or Scissors.");
-    const player = playerPlays.toUpperCase();
     
     gameRound(player, computer);
 
