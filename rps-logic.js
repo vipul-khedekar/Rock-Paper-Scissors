@@ -30,16 +30,16 @@ function gameRound(player, computer) {                              //Round of t
     return result;
 }
 
-for (count = 1; count <= 5; count++) {
+// for (count = 1; count <= 5; count++) {
 
     const computer = computerPlays();
 
     const playerPlays = prompt("Choose either Rock, Paper or Scissors.");
     const player = playerPlays.toUpperCase();
-        
+    
     gameRound(player, computer);
 
     console.log(player);
     console.log(computer);
     console.log(gameRound(player,computer));
-}
+// }
