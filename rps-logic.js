@@ -32,6 +32,13 @@ function gameRound(player, computer) {                              //Round of t
 
 // for (count = 1; count <= 5; count++) {
 
+    const buttons = document.querySelectorAll('button');
+    const buttons_array = Array.from(buttons);
+
+    buttons_array.forEach((choice) => {
+        choice.addEventListener('click',choice.dataset.choice);
+    });
+
     const computer = computerPlays();
 
     const playerPlays = prompt("Choose either Rock, Paper or Scissors.");
