@@ -30,28 +30,19 @@ function gameRound(player, computer) {                              //Round of t
     return result;
 }
 
-// for (count = 1; count <= 5; count++) {
+const buttons = document.querySelectorAll('button');
+const buttons_array = Array.from(buttons);
 
-    const buttons = document.querySelectorAll('button');
-    const buttons_array = Array.from(buttons);
+buttons_array.forEach((playerChoice) => {
+    playerChoice.addEventListener('click', () => {
+        const player = playerChoice.dataset.choice;
+        const computer = computerPlays();
 
-    buttons_array.forEach((playerChoice) => {
-        playerChoice.addEventListener('click', () => {
-            const player = playerChoice.dataset.choice;
-            const computer = computerPlays();
+        const displayResultContainer = document.querySelector('.displayResultContainer');
+        const displayResult = document.createElement('div');
 
-            const displayResultContainer = document.querySelector('.displayResultContainer');
-            const displayResult = document.createElement('div');
+        displayResult.innerText = gameRound(player, computer);
 
-            displayResult.innerText = gameRound(player, computer);
-
-            displayResultContainer.append(displayResult);
-            
-            console.log(player);
-            console.log(computer);
-            console.log(gameRound(player, computer));
-        });
+        displayResultContainer.append(displayResult);
     });
-    
-    // gameRound(player, computer);
-// }
+});
