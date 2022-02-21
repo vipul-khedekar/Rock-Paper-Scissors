@@ -1,4 +1,4 @@
-function computerPlays() {                                          //Computer chooses Rock, Paper or Scissors
+function computerPlays() {
     let computerChoice;
     let computerRandom = Math.random();
     
@@ -14,7 +14,7 @@ function computerPlays() {                                          //Computer c
     return computerChoice;
 }
 
-function gameRound(player, computer) {                              //Round of the game.
+function gameRound(player, computer) {
     
     if ((player === `ROCK` && computer === `SCISSORS`) ||
        (player === `PAPER` && computer === `ROCK`) ||
