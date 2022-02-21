@@ -35,15 +35,15 @@ function gameRound(player, computer) {                              //Round of t
     const buttons = document.querySelectorAll('button');
     const buttons_array = Array.from(buttons);
 
-    buttons_array.forEach((choice) => {
-        choice.addEventListener('click',choice.dataset.choice);
+    buttons_array.forEach((playerChoice) => {
+        playerChoice.addEventListener('click', () => {
+            const player = playerChoice.dataset.choice;
+            const computer = computerPlays();
+
+            console.log(player);
+            console.log(computer);
+        });
     });
-
-    const computer = computerPlays();
     
-    gameRound(player, computer);
-
-    console.log(player);
-    console.log(computer);
-    console.log(gameRound(player,computer));
+    // gameRound(player, computer);
 // }
